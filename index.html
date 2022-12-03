@@ -12,10 +12,14 @@
       href="./images/favicon-32x32.png"
     />
 
-    <script src="https://kit.fontawesome.com/69fbff42da.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/69fbff42da.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Frontend Mentor | E-commerce product page</title>
-    <link rel="stylesheet" href="/ecommerce-product-page-main/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/script.js" defer></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
     </style>
@@ -47,51 +51,60 @@
         </div>
         <div id="links-right" class="links">
           <ul>
-            <li>
-              <a href="#"
-                ><img
-                  src="/ecommerce-product-page-main/images/icon-cart.svg"
-                  alt=""
+            <li class="avatar">
+              <a id="open-cart" href="#"
+                ><img class="cart-icon" src="/images/icon-cart.svg" alt=""
               /></a>
+              <div id="quantity-cart">
+                <p class="number-items"></p>
+              </div>
             </li>
             <li id="avatar">
-              <a href=""
-                ><img
-                  src="/ecommerce-product-page-main/images/image-avatar.png"
-                  alt=""
-              /></a>
+              <a href="#"><img src="/images/image-avatar.png" alt="" /></a>
             </li>
           </ul>
         </div>
       </nav>
+      <div id="cart">
+        <div id="header-cart">
+          <p>Cart</p>
+        </div>
+        <hr id="hr-cart" />
+        <div id="items-cart">
+          <p class="empty-cart">Your cart is empty</p>
+          <div id="items">
+            <div id="item">
+              <img class="img-item" src="/images/image-product-1-thumbnail.jpg" alt="" />
+              <div id="description">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>
+                  <span class="value-item">$125,00</span> x
+                  <span class="total-items"></span>
+                  <strong class="total-value"></strong>
+                </p>
+                <a class="delete-items" href="#">
+                  <img width="10px" src="/images/icon-delete.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div id="checkout">
+              <button>Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <hr />
   </body>
   <main>
     <section>
       <div id="shoes">
-        <img
-          id="main-image"
-          src="/ecommerce-product-page-main/images/image-product-1.jpg"
-          alt=""
-        />
+        <img id="main-image" src="/images/image-product-1.jpg" alt="" />
         <div id="shoes-thumbnail">
-          <img
-            src="/ecommerce-product-page-main/images/image-product-1-thumbnail.jpg"
-            alt=""
-          />
-          <img
-            src="/ecommerce-product-page-main/images/image-product-2-thumbnail.jpg"
-            alt=""
-          />
-          <img
-            src="/ecommerce-product-page-main/images/image-product-3-thumbnail.jpg"
-            alt=""
-          />
-          <img
-            src="/ecommerce-product-page-main/images/image-product-4-thumbnail.jpg"
-            alt=""
-          />
+          <img src="/images/image-product-1-thumbnail.jpg" alt="" />
+          <img src="/images/image-product-2-thumbnail.jpg" alt="" />
+          <img src="/images/image-product-3-thumbnail.jpg" alt="" />
+          <img src="/images/image-product-4-thumbnail.jpg" alt="" />
         </div>
       </div>
       <div id="buy-section">
@@ -109,21 +122,14 @@
         <div id="quantity-buy">
           <div id="input">
             <span>
-              <a href="#">
-                <img
-                  id="icon-minus"
-                  src="/ecommerce-product-page-main/images/icon-minus.svg"
-                  alt=""
-                />
+              <a href="#" class="minus">
+                <img id="icon-minus" src="/images/icon-minus.svg" alt="" />
               </a>
             </span>
-            <input type="text" value="0" />
+            <input type="text" class="quantity-item"/>
             <span>
-              <a href="#">
-                <img
-                  src="/ecommerce-product-page-main/images/icon-plus.svg"
-                  alt=""
-                />
+              <a href="#" class="plus">
+                <img src="/images/icon-plus.svg" alt="" />
               </a>
             </span>
           </div>
